@@ -37,7 +37,8 @@
                                             <color key="baseForegroundColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="dxT-JS-UY2" kind="presentation" modalPresentationStyle="fullScreen" id="fVx-kc-r2x"/>
+                                            <action selector="loginPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGM-gH-vEI"/>
+                                            <segue destination="dxT-JS-UY2" kind="presentation" modalPresentationStyle="fullScreen" id="eeG-LZ-YdC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGQ-6X-Xy9">
@@ -50,6 +51,9 @@
                                             <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                             <color key="baseForegroundColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGb-xD-A7M"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -70,9 +74,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXD-rW-5gT">
-                                <rect key="frame" x="177" y="191" width="38" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXD-rW-5gT">
+                                <rect key="frame" x="177.66666666666666" y="191.33333333333334" width="37.666666666666657" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,13 +87,20 @@
                             <constraint firstItem="Kad-hZ-3pI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="CjQ-q6-QEk"/>
                             <constraint firstItem="oL6-40-hpN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Es6-Jd-SyL"/>
                             <constraint firstItem="pgA-Pe-UwV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JZC-7f-LZC"/>
+                            <constraint firstItem="ZXD-rW-5gT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N7K-nh-eZm"/>
                             <constraint firstItem="Kad-hZ-3pI" firstAttribute="top" secondItem="oL6-40-hpN" secondAttribute="bottom" constant="20" id="P6t-nN-PTn"/>
+                            <constraint firstItem="oL6-40-hpN" firstAttribute="top" secondItem="ZXD-rW-5gT" secondAttribute="bottom" constant="20" id="PE1-r9-fhv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oL6-40-hpN" secondAttribute="trailing" constant="80" id="PHB-8u-lvk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pgA-Pe-UwV" secondAttribute="bottom" multiplier="5" id="TXh-dK-DYN"/>
                             <constraint firstItem="oL6-40-hpN" firstAttribute="top" secondItem="pgA-Pe-UwV" secondAttribute="bottom" constant="68" id="XHU-5W-nUI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kad-hZ-3pI" secondAttribute="trailing" constant="100" id="XlH-kn-gZT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="cjo-tz-C5U" id="34f-6Y-1oD"/>
+                        <outlet property="passwordTextField" destination="2Xh-23-yfv" id="Eem-51-RBI"/>
+                        <outlet property="warningLabel" destination="ZXD-rW-5gT" id="vtj-k6-TGd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
