@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>902887797763-s8c2vssgid9938oc9jvl1ej1k7uqudl2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.902887797763-s8c2vssgid9938oc9jvl1ej1k7uqudl2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCtw3cFbrdkAj9_OnQqy39_xUcwHOI86jY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>902887797763</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fomstep.NoteBase</string>
+	<key>PROJECT_ID</key>
+	<string>notebase-d30ff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>notebase-d30ff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:902887797763:ios:770c205e9c75c95dab8a36</string>
+</dict>
+</plist>
