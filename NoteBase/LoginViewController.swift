@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -13,17 +14,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak private var passwordTextField: UITextField!
     
-    @IBOutlet weak private var warningLabel: UILabel!
+    @IBOutlet weak private var loginButton: UIButton!
+    
+    @IBOutlet weak private var registerButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        warningLabel.isHidden = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let segue = segue.destination as? UITabBarController else { return }
-        guard let vc = segue as? UIViewController else { return }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction private func loginPressed() {
@@ -33,17 +35,44 @@ class ViewController: UIViewController {
             presentAlertController(title: "Error", message: "Enter correct data")
             return
         }
+        guard password.count > 5 else {
+            presentAlertController(title: "Error", message: "The password must have at least 6 characters")
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            guard user == nil else {
+                self.performSegue(withIdentifier: "enteredSegue", sender: nil)
+                return
+            }
+            guard error != nil else {
+                self.presentAlertController(title: "Error", message: "User does not exist")
+                return
+            }
+        }
     }
     
     
     @IBAction private func registerPressed() {
-    }
-    
-    
-    private func presentWarning(with text: String) {
-        warningLabel.textColor = .systemRed
-        warningLabel.text = text
-        warningLabel.isHidden = false
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text,
+              email != "", password != "" else {
+            presentAlertController(title: "Error", message: "Enter correct data to register")
+            return
+        }
+        guard password.count > 5 else {
+            presentAlertController(title: "Error", message: "The password must have at least 6 characters")
+            return
+        }
+        Auth.auth().createUser(withEmail: email, password: password) { user, error in
+            guard user == nil else {
+                self.presentAlertController(title: "OK", message: "Successfully registered")
+                return
+            }
+            guard error == nil else {
+                self.presentAlertController(title: "Error", message: "User does exist")
+                return
+            }
+        }
     }
     
     private func presentAlertController(title: String?, message: String?) {
