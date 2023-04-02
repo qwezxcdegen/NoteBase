@@ -38,7 +38,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="loginPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGM-gH-vEI"/>
-                                            <segue destination="dxT-JS-UY2" kind="presentation" modalPresentationStyle="fullScreen" id="eeG-LZ-YdC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGQ-6X-Xy9">
@@ -74,12 +73,6 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXD-rW-5gT">
-                                <rect key="frame" x="177.66666666666666" y="191.33333333333334" width="37.666666666666657" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254908080000002" green="0.83529412749999998" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -87,9 +80,7 @@
                             <constraint firstItem="Kad-hZ-3pI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="CjQ-q6-QEk"/>
                             <constraint firstItem="oL6-40-hpN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Es6-Jd-SyL"/>
                             <constraint firstItem="pgA-Pe-UwV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JZC-7f-LZC"/>
-                            <constraint firstItem="ZXD-rW-5gT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N7K-nh-eZm"/>
                             <constraint firstItem="Kad-hZ-3pI" firstAttribute="top" secondItem="oL6-40-hpN" secondAttribute="bottom" constant="20" id="P6t-nN-PTn"/>
-                            <constraint firstItem="oL6-40-hpN" firstAttribute="top" secondItem="ZXD-rW-5gT" secondAttribute="bottom" constant="20" id="PE1-r9-fhv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oL6-40-hpN" secondAttribute="trailing" constant="80" id="PHB-8u-lvk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pgA-Pe-UwV" secondAttribute="bottom" multiplier="5" id="TXh-dK-DYN"/>
                             <constraint firstItem="oL6-40-hpN" firstAttribute="top" secondItem="pgA-Pe-UwV" secondAttribute="bottom" constant="68" id="XHU-5W-nUI"/>
@@ -98,8 +89,10 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="cjo-tz-C5U" id="34f-6Y-1oD"/>
+                        <outlet property="loginButton" destination="Kci-hw-DL6" id="Dmb-wQ-teg"/>
                         <outlet property="passwordTextField" destination="2Xh-23-yfv" id="Eem-51-RBI"/>
-                        <outlet property="warningLabel" destination="ZXD-rW-5gT" id="vtj-k6-TGd"/>
+                        <outlet property="registerButton" destination="dGQ-6X-Xy9" id="q5u-0q-zRD"/>
+                        <segue destination="dxT-JS-UY2" kind="presentation" identifier="enteredSegue" modalPresentationStyle="fullScreen" id="F4J-k6-JKw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -241,6 +234,20 @@
                                     <color key="baseForegroundColor" red="0.64256082219306876" green="0.21020689351891961" blue="0.16803621705467497" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NoteBase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCz-kG-gsj">
+                                <rect key="frame" x="107" y="102" width="179.33333333333348" height="46.333333333333371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="40"/>
+                                <color key="textColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-i7-6zR">
+                                <rect key="frame" x="137" y="188" width="119" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="25"/>
+                                <color key="textColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8q-8F-wGA"/>
                         <color key="backgroundColor" red="0.97254908080000002" green="0.83529412749999998" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -286,9 +293,6 @@
         <image name="note.text.badge.plus" catalog="system" width="128" height="108"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
