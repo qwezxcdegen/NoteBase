@@ -9,25 +9,30 @@ import UIKit
 import FirebaseAuth
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak private var emailTextField: UITextField!
+    // MARK: - IBOutlets
     
+    // Textfields
+    @IBOutlet weak private var emailTextField: UITextField!
     @IBOutlet weak private var passwordTextField: UITextField!
     
+    // Buttons
     @IBOutlet weak private var loginButton: UIButton!
-    
     @IBOutlet weak private var registerButton: UIButton!
     
-    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // MARK: - Override methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
+    // MARK: - IBActions
+    
+    // Login button
     @IBAction private func loginPressed() {
         guard let email = emailTextField.text,
               let password = passwordTextField.text,
@@ -50,8 +55,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
+    // Register button
     @IBAction private func registerPressed() {
         guard let email = emailTextField.text,
               let password = passwordTextField.text,
@@ -75,6 +79,9 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Methods
+    
+    // present UIAlertController
     private func presentAlertController(title: String?, message: String?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
