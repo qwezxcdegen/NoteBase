@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 final class CreateTaskViewController: UIViewController {
 
@@ -14,6 +15,12 @@ final class CreateTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     @IBAction private func clearTextView() {
         taskTextView.text = ""
     }
@@ -27,6 +34,9 @@ final class CreateTaskViewController: UIViewController {
         let viewController = viewControllers[0] as? TasksViewController else {
             return
         }
+        let task = Task(title: text, userID: viewController.user.uid)
+        let taskRef = viewController.ref.child(task.title.lowercased())
+        taskRef.setValue(["title": task.title, "userID": task.userID, "completed": task.completed])
         viewController.tasks.insert(text, at: 0)
         viewController.tableView.reloadData()
     }

@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class ViewController: UIViewController {
     // MARK: - IBOutlets
@@ -19,9 +20,17 @@ class ViewController: UIViewController {
     @IBOutlet weak private var loginButton: UIButton!
     @IBOutlet weak private var registerButton: UIButton!
     
+    // MARK: - Properties
+    var ref: FirebaseDatabase.DatabaseReference!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = FirebaseDatabase.Database.database().reference(withPath: "users")
+        Auth.auth().addStateDidChangeListener { auth, user in
+            guard user != nil else { return }
+            self.performSegue(withIdentifier: "enteredSegue", sender: nil)
+        }
     }
     
     // MARK: - Override methods
@@ -73,6 +82,8 @@ class ViewController: UIViewController {
         }
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
             guard user == nil else {
+                let userRef = self.ref.child((user?.user.uid)!)
+                userRef.setValue(["email": user?.user.email])
                 self.presentAlertController(title: "OK", message: "Successfully registered")
                 return
             }
