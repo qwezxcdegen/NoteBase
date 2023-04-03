@@ -51,10 +51,12 @@ class ViewController: UIViewController {
                 self.passwordTextField.text = ""
                 return
             }
-            guard error != nil else {
+            guard error == nil else {
                 self.presentAlertController(title: "Error", message: "User does not exist")
                 return
             }
+            self.presentAlertController(title: "Error", message: "Error occured")
+            return
         }
     }
     // Register button

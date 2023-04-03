@@ -11,6 +11,8 @@ final class TasksViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var tasks: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

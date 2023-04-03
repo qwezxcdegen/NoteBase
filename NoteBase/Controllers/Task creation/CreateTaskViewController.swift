@@ -18,7 +18,17 @@ final class CreateTaskViewController: UIViewController {
         taskTextView.text = ""
     }
     @IBAction private func addTask() {
-        presentAlertController(title: "Success", message: "Task created")
+        guard let text = taskTextView.text, text != "" else {
+            presentAlertController(title: "Error", message: "Text field is empty")
+            return
+        }
+        guard let tabBar = tabBarController,
+        let viewControllers = tabBar.viewControllers,
+        let viewController = viewControllers[0] as? TasksViewController else {
+            return
+        }
+        viewController.tasks.insert(text, at: 0)
+        viewController.tableView.reloadData()
     }
     
     private func presentAlertController(title: String?, message: String?) {
