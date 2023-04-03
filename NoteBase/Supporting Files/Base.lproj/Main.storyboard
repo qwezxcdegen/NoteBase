@@ -99,15 +99,15 @@
             </objects>
             <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="AU7-2O-AZJ">
             <objects>
-                <viewController id="k6F-MT-IjI" sceneMemberID="viewController">
+                <viewController id="k6F-MT-IjI" customClass="CreateTaskViewController" customModule="NoteBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mrp-Vr-3oE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="qwe" translatesAutoresizingMaskIntoConstraints="NO" id="qrK-Uk-Cw2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrK-Uk-Cw2">
                                 <rect key="frame" x="16" y="111" width="361" height="658"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98431372640000003" green="0.90196073060000004" blue="0.84705877299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -128,6 +128,9 @@
                                             <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                             <color key="baseForegroundColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clearTextView" destination="k6F-MT-IjI" eventType="touchUpInside" id="DXX-ut-pJk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuL-lh-c2f">
                                         <rect key="frame" x="180.66666666666663" y="0.0" width="180.33333333333337" height="40"/>
@@ -139,6 +142,9 @@
                                             <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                             <color key="baseForegroundColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addTask" destination="k6F-MT-IjI" eventType="touchUpInside" id="Mc2-kP-ffN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -160,15 +166,18 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="taskTextView" destination="qrK-Uk-Cw2" id="JyG-aH-48F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMZ-pt-9gx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165.6488549618321" y="781.69014084507046"/>
         </scene>
-        <!--View Controller-->
+        <!--Tasks View Controller-->
         <scene sceneID="dW8-3C-MZn">
             <objects>
-                <viewController id="TyU-UO-vPO" sceneMemberID="viewController">
+                <viewController id="TyU-UO-vPO" customClass="TasksViewController" customModule="NoteBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="shb-bX-RKp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,22 +218,24 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="pbe-Tq-3vr" id="vhe-HU-Kua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlT-Wb-aWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="267.93893129770993" y="781.69014084507046"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="L3j-Nx-IhK">
             <objects>
-                <viewController id="0CY-FJ-KAU" sceneMemberID="viewController">
+                <viewController id="0CY-FJ-KAU" customClass="SettingsViewController" customModule="NoteBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sf1-x2-7tq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayz-KU-QOw">
-                                <rect key="frame" x="137" y="661" width="119" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayz-KU-QOw">
+                                <rect key="frame" x="137" y="662" width="119" height="51"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <backgroundConfiguration key="background" cornerRadius="15">
@@ -233,17 +244,18 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="27"/>
                                     <color key="baseForegroundColor" red="0.64256082219306876" green="0.21020689351891961" blue="0.16803621705467497" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutPressed" destination="0CY-FJ-KAU" eventType="touchUpInside" id="fxU-J3-oNN"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NoteBase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCz-kG-gsj">
-                                <rect key="frame" x="107" y="102" width="179.33333333333348" height="46.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NoteBase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCz-kG-gsj">
+                                <rect key="frame" x="107.00000000000001" y="103" width="179.33333333333337" height="46.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="40"/>
                                 <color key="textColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-i7-6zR">
-                                <rect key="frame" x="137" y="188" width="119" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-i7-6zR">
+                                <rect key="frame" x="137" y="189.33333333333334" width="119" height="29"/>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="25"/>
                                 <color key="textColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -251,6 +263,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8q-8F-wGA"/>
                         <color key="backgroundColor" red="0.97254908080000002" green="0.83529412749999998" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Mno-i7-6zR" firstAttribute="top" secondItem="RCz-kG-gsj" secondAttribute="bottom" constant="40" id="Fqb-0n-keH"/>
+                            <constraint firstItem="RCz-kG-gsj" firstAttribute="top" secondItem="g8q-8F-wGA" secondAttribute="top" constant="44" id="KEw-7I-rfs"/>
+                            <constraint firstItem="Mno-i7-6zR" firstAttribute="centerX" secondItem="Sf1-x2-7tq" secondAttribute="centerX" id="RpD-PI-sTH"/>
+                            <constraint firstItem="g8q-8F-wGA" firstAttribute="bottom" secondItem="Ayz-KU-QOw" secondAttribute="bottom" constant="56" id="fU8-ZB-Ia2"/>
+                            <constraint firstItem="Ayz-KU-QOw" firstAttribute="centerX" secondItem="Sf1-x2-7tq" secondAttribute="centerX" id="lTL-ed-abS"/>
+                            <constraint firstItem="RCz-kG-gsj" firstAttribute="centerX" secondItem="Sf1-x2-7tq" secondAttribute="centerX" id="oOP-Se-20G"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="SZu-sY-ghl">
                         <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="hierarchical">
@@ -261,6 +281,9 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="usernameLabel" destination="Mno-i7-6zR" id="P2c-2n-ge3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNp-il-nvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

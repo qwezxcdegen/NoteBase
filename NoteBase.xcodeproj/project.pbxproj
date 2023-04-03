@@ -16,6 +16,10 @@
 		072FA36429DA10010079D573 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 072FA36329DA10000079D573 /* GoogleService-Info.plist */; };
 		072FA36729DA105D0079D573 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 072FA36629DA105D0079D573 /* FirebaseAuth */; };
 		072FA36929DA105D0079D573 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 072FA36829DA105D0079D573 /* FirebaseDatabase */; };
+		0730DCEB29DA851A00CDB1F0 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730DCEA29DA851A00CDB1F0 /* TasksViewController.swift */; };
+		0730DCF329DA86B500CDB1F0 /* TasksVC + TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730DCF229DA86B400CDB1F0 /* TasksVC + TableVC.swift */; };
+		0730DCF729DA87E700CDB1F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730DCF629DA87E700CDB1F0 /* SettingsViewController.swift */; };
+		0730DCF929DA89B500CDB1F0 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730DCF829DA89B500CDB1F0 /* CreateTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		0728C81629D9F7E2008EB6BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0728C81829D9F7E2008EB6BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072FA36329DA10000079D573 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0730DCEA29DA851A00CDB1F0 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		0730DCF229DA86B400CDB1F0 /* TasksVC + TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksVC + TableVC.swift"; sourceTree = "<group>"; };
+		0730DCF629DA87E700CDB1F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0730DCF829DA89B500CDB1F0 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +70,68 @@
 		0728C80929D9F7E1008EB6BD /* NoteBase */ = {
 			isa = PBXGroup;
 			children = (
+				0730DCEC29DA858A00CDB1F0 /* Supporting Files */,
+				0730DCED29DA85A700CDB1F0 /* Controllers */,
+			);
+			path = NoteBase;
+			sourceTree = "<group>";
+		};
+		0730DCEC29DA858A00CDB1F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				0728C80A29D9F7E1008EB6BD /* AppDelegate.swift */,
 				0728C80C29D9F7E1008EB6BD /* SceneDelegate.swift */,
-				0728C80E29D9F7E1008EB6BD /* LoginViewController.swift */,
 				0728C81029D9F7E1008EB6BD /* Main.storyboard */,
 				0728C81329D9F7E2008EB6BD /* Assets.xcassets */,
 				0728C81529D9F7E2008EB6BD /* LaunchScreen.storyboard */,
 				0728C81829D9F7E2008EB6BD /* Info.plist */,
 				072FA36329DA10000079D573 /* GoogleService-Info.plist */,
 			);
-			path = NoteBase;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0730DCED29DA85A700CDB1F0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0730DCEE29DA85B300CDB1F0 /* Login */,
+				0730DCEF29DA85BC00CDB1F0 /* Tasks */,
+				0730DCF429DA87AC00CDB1F0 /* Task creation */,
+				0730DCF529DA87C200CDB1F0 /* Settings */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0730DCEE29DA85B300CDB1F0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0728C80E29D9F7E1008EB6BD /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0730DCEF29DA85BC00CDB1F0 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				0730DCEA29DA851A00CDB1F0 /* TasksViewController.swift */,
+				0730DCF229DA86B400CDB1F0 /* TasksVC + TableVC.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		0730DCF429DA87AC00CDB1F0 /* Task creation */ = {
+			isa = PBXGroup;
+			children = (
+				0730DCF829DA89B500CDB1F0 /* CreateTaskViewController.swift */,
+			);
+			path = "Task creation";
+			sourceTree = "<group>";
+		};
+		0730DCF529DA87C200CDB1F0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0730DCF629DA87E700CDB1F0 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +214,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0728C80F29D9F7E1008EB6BD /* LoginViewController.swift in Sources */,
+				0730DCEB29DA851A00CDB1F0 /* TasksViewController.swift in Sources */,
 				0728C80B29D9F7E1008EB6BD /* AppDelegate.swift in Sources */,
+				0730DCF329DA86B500CDB1F0 /* TasksVC + TableVC.swift in Sources */,
 				0728C80D29D9F7E1008EB6BD /* SceneDelegate.swift in Sources */,
+				0730DCF729DA87E700CDB1F0 /* SettingsViewController.swift in Sources */,
+				0730DCF929DA89B500CDB1F0 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +368,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWCGQQGWMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NoteBase/Info.plist;
+				INFOPLIST_FILE = "NoteBase/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +399,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWCGQQGWMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NoteBase/Info.plist;
+				INFOPLIST_FILE = "NoteBase/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
