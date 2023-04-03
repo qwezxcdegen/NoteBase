@@ -18,7 +18,7 @@ final class CreateTaskViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        view.endEditing(true)
+        hideKeyboard()
     }
     
     @IBAction private func clearTextView() {
@@ -37,16 +37,20 @@ final class CreateTaskViewController: UIViewController {
         let task = Task(title: text, userID: viewController.user.uid)
         let taskRef = viewController.ref.child(task.title.lowercased())
         taskRef.setValue(["title": task.title, "userID": task.userID, "completed": task.completed])
-        viewController.tasks.insert(text, at: 0)
-        viewController.tableView.reloadData()
+        presentAlertController(title: "OK", message: "Task added")
     }
     
     private func presentAlertController(title: String?, message: String?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.taskTextView.text = ""
+            self.hideKeyboard()
         }
         alertController.addAction(okAction)
         present(alertController, animated: true)
+    }
+    
+    private func hideKeyboard() {
+        view.endEditing(true)
     }
 }

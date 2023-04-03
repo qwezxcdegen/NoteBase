@@ -82,9 +82,9 @@ class ViewController: UIViewController {
         }
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
             guard user == nil else {
+                self.presentAlertController(title: "OK", message: "Successfully registered")
                 let userRef = self.ref.child((user?.user.uid)!)
                 userRef.setValue(["email": user?.user.email])
-                self.presentAlertController(title: "OK", message: "Successfully registered")
                 return
             }
             guard error == nil else {
