@@ -107,9 +107,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrK-Uk-Cw2">
-                                <rect key="frame" x="16" y="111" width="361" height="658"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrK-Uk-Cw2">
+                                <rect key="frame" x="16" y="111" width="361" height="630"/>
                                 <color key="backgroundColor" red="0.98431372640000003" green="0.90196073060000004" blue="0.84705877299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.60784316059999999" green="0.34117650989999998" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
@@ -152,9 +151,13 @@
                         <viewLayoutGuide key="safeArea" id="NE6-jY-a1G"/>
                         <color key="backgroundColor" red="0.97254908080000002" green="0.83529412749999998" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="qrK-Uk-Cw2" firstAttribute="leading" secondItem="NE6-jY-a1G" secondAttribute="leading" constant="16" id="8PH-h8-pUj"/>
                             <constraint firstItem="NE6-jY-a1G" firstAttribute="trailing" secondItem="EGv-JD-j8j" secondAttribute="trailing" constant="16" id="Fby-iZ-MU8"/>
+                            <constraint firstItem="NE6-jY-a1G" firstAttribute="trailing" secondItem="qrK-Uk-Cw2" secondAttribute="trailing" constant="16" id="MGg-Fe-iOo"/>
                             <constraint firstItem="EGv-JD-j8j" firstAttribute="top" secondItem="NE6-jY-a1G" secondAttribute="top" id="QpR-44-X1V"/>
                             <constraint firstItem="EGv-JD-j8j" firstAttribute="leading" secondItem="NE6-jY-a1G" secondAttribute="leading" constant="16" id="Xu8-6R-oyB"/>
+                            <constraint firstItem="NE6-jY-a1G" firstAttribute="bottom" secondItem="qrK-Uk-Cw2" secondAttribute="bottom" constant="28" id="hTY-4e-bJ1"/>
+                            <constraint firstItem="qrK-Uk-Cw2" firstAttribute="top" secondItem="EGv-JD-j8j" secondAttribute="bottom" constant="12" id="qWq-rg-M62"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="rvo-PR-8Uu">
