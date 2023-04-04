@@ -18,11 +18,17 @@ extension OfflineTasksViewController {
             text != "" else { return }
             self.offlineTasks.insert(OfflineTask(title: text), at: 0)
             self.offlineTasksTV.reloadData()
+            self.saveTasks()
             print(self.offlineTasks)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
         ac.addAction(cancelAction)
         ac.addAction(addAction)
         present(ac, animated: true)
+    }
+    
+    func saveTasks() {
+        UserDefaults.standard.set(self.offlineTasks.map { $0.title }, forKey: "titles")
+        UserDefaults.standard.set(self.offlineTasks.map { $0.completed }, forKey: "status")
     }
 }

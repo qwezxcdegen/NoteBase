@@ -29,11 +29,13 @@ extension OfflineTasksViewController: UITableViewDelegate, UITableViewDataSource
         if editingStyle == .delete {
             offlineTasks.remove(at: indexPath.row)
             offlineTasksTV.deleteRows(at: [indexPath], with: .fade)
+            saveTasks()
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         offlineTasks[indexPath.row].completed.toggle()
+        saveTasks()
         offlineTasksTV.reloadData()
     }
     

@@ -20,6 +20,7 @@ class OfflineTasksViewController: UIViewController {
         super.viewDidLoad()
         offlineTasksTV.delegate = self
         offlineTasksTV.dataSource = self
+        getTasks()
     }
     
     @IBAction func addOfflineTaskPressed(_ sender: UIBarButtonItem) {
@@ -28,5 +29,13 @@ class OfflineTasksViewController: UIViewController {
     
     @IBAction func onlineButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
+    }
+    
+    private func getTasks() {
+        guard let titles = UserDefaults.standard.object(forKey: "titles") as? [String] else { return }
+        guard let statuses = UserDefaults.standard.object(forKey: "status") as? [Bool] else { return }
+        for i in 0..<titles.count {
+            offlineTasks.append(OfflineTask(title: titles[i], completed: statuses[i]))
+        }
     }
 }
