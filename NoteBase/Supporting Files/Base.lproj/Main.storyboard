@@ -380,7 +380,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.97254908080000002" green="0.83529412749999998" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <outlet property="offlineTaskLabel" destination="19s-UP-tlh" id="3XP-ZX-Lez"/>
+                                            <outlet property="offlineTaskLabel" destination="19s-UP-tlh" id="d5b-yL-TPo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -399,18 +399,18 @@
                         <barButtonItem key="leftBarButtonItem" title="Online" id="kPN-hh-gXI">
                             <color key="tintColor" red="0.40570458739999998" green="0.22923742389999999" blue="0.14403492579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="onlineButtonPressed:" destination="N1N-Uu-Y0R" id="lUM-OD-sXx"/>
+                                <action selector="onlineButtonPressed:" destination="N1N-Uu-Y0R" id="xoh-jE-dQ9"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="ye2-iz-zaS">
                             <color key="tintColor" red="0.40570458739999998" green="0.22923742389999999" blue="0.14403492579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="addOfflineTaskPressed:" destination="N1N-Uu-Y0R" id="Trm-E6-tiR"/>
+                                <action selector="addOfflineTaskPressed:" destination="N1N-Uu-Y0R" id="0gE-cJ-iQT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="offlineTasksTV" destination="10X-SJ-tJI" id="qPK-Ru-j3u"/>
+                        <outlet property="offlineTasksTV" destination="10X-SJ-tJI" id="EAU-MS-ddn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnE-NH-Ut2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
