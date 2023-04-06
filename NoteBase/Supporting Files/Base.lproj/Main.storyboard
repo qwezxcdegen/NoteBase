@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Kad-hZ-3pI">
-                                <rect key="frame" x="100" y="331.66666666666669" width="193" height="92"/>
+                                <rect key="frame" x="100" y="331.66666666666669" width="193" height="138.66666666666669"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-hw-DL6">
                                         <rect key="frame" x="0.0" y="0.0" width="193" height="40"/>
@@ -52,6 +52,18 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="registerPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGb-xD-A7M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sj-F2-cUT">
+                                        <rect key="frame" x="0.0" y="104" width="193" height="34.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Reset password">
+                                            <backgroundConfiguration key="background" cornerRadius="15"/>
+                                            <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                            <color key="baseForegroundColor" red="0.6393623737373737" green="0.36126232748796244" blue="0.22698908256605618" alpha="0.72361341059602635" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="resetPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYY-Hr-kxC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -341,7 +353,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaG-NK-1oR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="-4"/>
+            <point key="canvasLocation" x="1166" y="-2"/>
         </scene>
         <!--Offline mode-->
         <scene sceneID="tDx-2c-RdK">

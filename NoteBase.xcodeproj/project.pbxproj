@@ -130,9 +130,9 @@
 		0730DCEF29DA85BC00CDB1F0 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				07DCF58D29DA90D200C93FCB /* Cells */,
 				0730DCEA29DA851A00CDB1F0 /* TasksViewController.swift */,
 				0730DCF229DA86B400CDB1F0 /* TasksVC + TableVC.swift */,
+				07DCF58E29DA90E100C93FCB /* TaskTableViewCell.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -151,14 +151,6 @@
 				0730DCF629DA87E700CDB1F0 /* SettingsViewController.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		07DCF58D29DA90D200C93FCB /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				07DCF58E29DA90E100C93FCB /* TaskTableViewCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		07DCF59029DA977900C93FCB /* Models */ = {

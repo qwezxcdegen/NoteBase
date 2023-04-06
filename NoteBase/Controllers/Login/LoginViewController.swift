@@ -93,6 +93,21 @@ class ViewController: UIViewController {
             }
         }
     }
+    // Password reset button
+    @IBAction func resetPasswordPressed() {
+        guard let email = emailTextField.text, email != "" else {
+            presentAlertController(title: "Error", message: "Enter correct e-mail")
+            return
+        }
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            guard error == nil else {
+                self.presentAlertController(title: "Error", message: "Error occured")
+                return
+            }
+            self.presentAlertController(title: "OK", message: "Message sent to \(email)")
+        }
+    }
+    
     
     // MARK: - Methods
     
