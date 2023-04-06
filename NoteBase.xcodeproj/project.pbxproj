@@ -17,6 +17,7 @@
 		0730DCF329DA86B500CDB1F0 /* TasksVC + TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730DCF229DA86B400CDB1F0 /* TasksVC + TableVC.swift */; };
 		0730DCF729DA87E700CDB1F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730DCF629DA87E700CDB1F0 /* SettingsViewController.swift */; };
 		0730DCF929DA89B500CDB1F0 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730DCF829DA89B500CDB1F0 /* CreateTaskViewController.swift */; };
+		073B62F029DF10AE00BFBA5E /* Swift.gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 073B62EF29DF10AE00BFBA5E /* Swift.gitignore */; };
 		07DCF58F29DA90E100C93FCB /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF58E29DA90E100C93FCB /* TaskTableViewCell.swift */; };
 		07DCF59229DA978B00C93FCB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF59129DA978B00C93FCB /* User.swift */; };
 		07DCF59429DA978F00C93FCB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF59329DA978F00C93FCB /* Task.swift */; };
@@ -43,6 +44,7 @@
 		0730DCF229DA86B400CDB1F0 /* TasksVC + TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksVC + TableVC.swift"; sourceTree = "<group>"; };
 		0730DCF629DA87E700CDB1F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0730DCF829DA89B500CDB1F0 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		073B62EF29DF10AE00BFBA5E /* Swift.gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Swift.gitignore; sourceTree = "<group>"; };
 		07DCF58E29DA90E100C93FCB /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		07DCF59129DA978B00C93FCB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		07DCF59329DA978F00C93FCB /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		0730DCEC29DA858A00CDB1F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				073B62EF29DF10AE00BFBA5E /* Swift.gitignore */,
 				0728C80A29D9F7E1008EB6BD /* AppDelegate.swift */,
 				0728C80C29D9F7E1008EB6BD /* SceneDelegate.swift */,
 				0728C81029D9F7E1008EB6BD /* Main.storyboard */,
@@ -239,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073B62F029DF10AE00BFBA5E /* Swift.gitignore in Resources */,
 				07F3E55F29DB2B870084D235 /* GoogleService-Info.plist in Resources */,
 				0728C81729D9F7E2008EB6BD /* LaunchScreen.storyboard in Resources */,
 				0728C81429D9F7E2008EB6BD /* Assets.xcassets in Resources */,
