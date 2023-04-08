@@ -194,6 +194,7 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="SsI-Yd-tr4"/>
                     <connections>
                         <outlet property="taskTextView" destination="qrK-Uk-Cw2" id="JyG-aH-48F"/>
                     </connections>
